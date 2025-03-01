@@ -154,25 +154,23 @@ SELECT * FROM (
 ) ranked WHERE rank <= 3;
 ```
 
-### 5. **Execute Queries and Save Output**
-```bash
-hive -f queries.hql > output.txt
-```
+### 5. *Execute Queries and Save Output*
+Run each command individually. The outputs of the commands are stored in the output folder with the given names.
 
-### 6. **Copy Output from HDFS to Local System**
-```bash
-hdfs dfs -get /user/hive/output /tmp/output
-```
 
-### 7. **Access Hive Server Container**
-```bash
+### 6. *Access Hive Server Container*
+bash
 docker exec -it hive-server /bin/bash
-```
 
-### 8. **Copy Output from HDFS to Local Filesystem (Inside the Container)**
-```bash
+
+### 7. *Copy Output from HDFS to Local Filesystem (Inside the Container)*
+bash
 hdfs dfs -get /user/hive/output /tmp/output
-```
+
+
+### 8. *Exit the Container*
+bash
+exit
 
 ### 9. **Exit the Container**
 ```bash
